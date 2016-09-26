@@ -1,0 +1,15 @@
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+
+
+$container-max-widths: (
+  xs: 380px,
+  sm: 576px,
+  md: 720px,
+  lg: 940px,
+  xl: 1170px
+) !default;
+
+//$enable-flex: true;

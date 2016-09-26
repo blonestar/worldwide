@@ -1,0 +1,11 @@
+/* line 1, E:/___WWW_Path/worldwide.com/wp-content/themes/worldwide/scss/utilities.scss */
+.vertical-center,
+.vertical-center-content > * {
+  position: relative;
+  top: 50%;
+  transform: perspective(1px) translateY(-50%);
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidXRpbGl0aWVzLmNzcyIsInNvdXJjZXMiOlsidXRpbGl0aWVzLnNjc3MiXSwibWFwcGluZ3MiOiI7QUFBQSxBQUFBLGdCQUFnQjtBQUNoQixBQUEyQix3QkFBSCxHQUFHLENBQUMsQ0FBQztFQUMzQixRQUFRLEVBQUUsUUFBUztFQUNuQixHQUFHLEVBQUUsR0FBSTtFQUNULFNBQVMsRUFBRSxnQkFBVyxDQUFNLGdCQUFVO0NBQ3ZDIiwibmFtZXMiOltdfQ== */
+
+/*# sourceMappingURL=utilities.css.map */
