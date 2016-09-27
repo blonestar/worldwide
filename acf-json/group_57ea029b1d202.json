@@ -3,31 +3,9 @@
     "title": "Resources",
     "fields": [
         {
-            "key": "field_57ea02a400b1b",
-            "label": "Category",
-            "name": "category",
-            "type": "taxonomy",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "taxonomy": "resources_tax",
-            "field_type": "select",
-            "allow_null": 0,
-            "add_term": 1,
-            "save_terms": 0,
-            "load_terms": 0,
-            "return_format": "id",
-            "multiple": 0
-        },
-        {
             "key": "field_57ea0e246ec66",
-            "label": "",
-            "name": "",
+            "label": "Document type \/ attachment",
+            "name": "document_type__attachment",
             "type": "clone",
             "instructions": "",
             "required": 0,
@@ -63,5 +41,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1474957045
+    "modified": 1475014242
 }
