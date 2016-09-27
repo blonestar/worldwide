@@ -167,6 +167,13 @@
                 "operator": "!=",
                 "value": "templates\/homepage.php"
             }
+        ],
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "resources_tax"
+            }
         ]
     ],
     "menu_order": 0,
@@ -177,5 +184,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1474786575
+    "modified": 1474994678
 }

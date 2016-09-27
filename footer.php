@@ -1,5 +1,9 @@
-<?php get_template_blocks(get_field('footer_template_block', 'option')) ?>
-
+<?php 
+	wp_reset_query();
+	if (get_field('hide_footer_blocks') !== true) {
+		get_template_blocks(get_field('footer_template_block', 'option'));
+	}
+?>
 </div><!-- main content end -->
 
 

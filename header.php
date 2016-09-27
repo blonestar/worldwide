@@ -494,16 +494,27 @@
 
 <div class="main-content">
 
-<?php $header_type = get_field('header_type'); ?>
+<?php
+
+$post_id = get_the_ID();
+if (is_tax()) {
+	//$term = get_term_by( 'slug', get_query_var('term'), get_query_var('taxonomy') );
+	$post_id = 'resources_tax_'.get_queried_object()->term_id;
+	
+}
+
+//echo get_queried_object()->slug;
+
+$header_type = get_field('header_type', $post_id); ?>
 <?php if ($header_type == 'image' && ! is_front_page()) { ?>
-<?php $header_image = get_field('header_image'); ?>
+<?php $header_image = get_field('header_image', $post_id); ?>
 <?php //print_r($header_image); ?>
 <div class="hero-image-webpart hero-sm dark-image mobile-scaled">
 	<div class="img-bg" style="background-image:url(<?php echo $header_image['url'] ?>); height: <?php echo $header_image['height'] ?>px"></div>
-	<?php if (get_field('header_text')) { ?>
+	<?php if (get_field('header_text', $post_id)) { ?>
 	<div class="container">
 		<div class="hero-content">
-			<?php the_field('header_text') ?>
+			<?php the_field('header_text', $post_id) ?>
 		</div>
 	</div>
 	<?php } ?>

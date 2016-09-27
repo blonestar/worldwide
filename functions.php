@@ -471,10 +471,193 @@ add_action( 'init', 'team_members_post_type', 0 );
 
 
 
+// Register Custom Post Type
+function resources_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Resources', 'Post Type General Name', 'worldwide' ),
+		'singular_name'         => _x( 'Resource', 'Post Type Singular Name', 'worldwide' ),
+		'menu_name'             => __( 'Resources', 'worldwide' ),
+		'name_admin_bar'        => __( 'Resources', 'worldwide' ),
+		'archives'              => __( 'Item Archives', 'worldwide' ),
+		'parent_item_colon'     => __( 'Parent Item:', 'worldwide' ),
+		'all_items'             => __( 'All Resources', 'worldwide' ),
+		'add_new_item'          => __( 'Add New', 'worldwide' ),
+		'add_new'               => __( 'Add New', 'worldwide' ),
+		'new_item'              => __( 'New', 'worldwide' ),
+		'edit_item'             => __( 'Edit', 'worldwide' ),
+		'update_item'           => __( 'Update', 'worldwide' ),
+		'view_item'             => __( 'View', 'worldwide' ),
+		'search_items'          => __( 'Search', 'worldwide' ),
+		'not_found'             => __( 'Not found', 'worldwide' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'worldwide' ),
+		'featured_image'        => __( 'Featured Image', 'worldwide' ),
+		'set_featured_image'    => __( 'Set featured image', 'worldwide' ),
+		'remove_featured_image' => __( 'Remove featured image', 'worldwide' ),
+		'use_featured_image'    => __( 'Use as featured image', 'worldwide' ),
+		'insert_into_item'      => __( 'Insert into item', 'worldwide' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'worldwide' ),
+		'items_list'            => __( 'Items list', 'worldwide' ),
+		'items_list_navigation' => __( 'Items list navigation', 'worldwide' ),
+		'filter_items_list'     => __( 'Filter items list', 'worldwide' ),
+	);
+	$rewrite = array(
+		'slug'                  => 'resources/resource-library/%resources_tax%',
+		'with_front'            => true,
+		'pages'                 => true,
+		'feeds'                 => true,
+	);
+	$args = array(
+		'label'                 => __( 'Resource', 'worldwide' ),
+		'description'           => __( 'Resources (articles, documents, videos...)', 'worldwide' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'excerpt'),
+		'taxonomies'            => array( 'resources_tax' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 20,
+		'menu_icon'             => 'dashicons-archive',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => false, // 'resources/resource-library',
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'rewrite'               => $rewrite,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'resources', $args );
+
+}
+add_action( 'init', 'resources_post_type', 0 );
+
+// Register Custom Taxonomy
+function resources_taxonomy() {
+
+	$labels = array(
+		'name'                       => _x( 'Resource Categories', 'Taxonomy General Name', 'worldwide' ),
+		'singular_name'              => _x( 'Resource Category', 'Taxonomy Singular Name', 'worldwide' ),
+		'menu_name'                  => __( 'Resource Category', 'worldwide' ),
+		'all_items'                  => __( 'All Items', 'worldwide' ),
+		'parent_item'                => __( 'Parent Item', 'worldwide' ),
+		'parent_item_colon'          => __( 'Parent Item:', 'worldwide' ),
+		'new_item_name'              => __( 'New Item Name', 'worldwide' ),
+		'add_new_item'               => __( 'Add New Item', 'worldwide' ),
+		'edit_item'                  => __( 'Edit Item', 'worldwide' ),
+		'update_item'                => __( 'Update Item', 'worldwide' ),
+		'view_item'                  => __( 'View Item', 'worldwide' ),
+		'separate_items_with_commas' => __( 'Separate items with commas', 'worldwide' ),
+		'add_or_remove_items'        => __( 'Add or remove items', 'worldwide' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'worldwide' ),
+		'popular_items'              => __( 'Popular Items', 'worldwide' ),
+		'search_items'               => __( 'Search Items', 'worldwide' ),
+		'not_found'                  => __( 'Not Found', 'worldwide' ),
+		'no_terms'                   => __( 'No items', 'worldwide' ),
+		'items_list'                 => __( 'Items list', 'worldwide' ),
+		'items_list_navigation'      => __( 'Items list navigation', 'worldwide' ),
+	);
+	$rewrite = array(
+		'slug'                       => 'resources/resource-library',
+		'with_front'                 => true,
+		'hierarchical'               => true,
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+		'rewrite'                    => $rewrite,
+		//'default_term'				 => 'articles'
+	);
+	register_taxonomy( 'resources_tax', array( 'resources' ), $args );
+
+}
+add_action( 'init', 'resources_taxonomy', 0 );
+
+add_filter('post_type_link', 'events_permalink_structure', 10, 4);
+function events_permalink_structure($post_link, $post, $leavename, $sample)
+{
+    if ( false !== strpos( $post_link, '%resources_tax%' ) ) {
+        $resources_tax_term = get_the_terms( $post->ID, 'resources_tax' );
+        $post_link = str_replace( '%resources_tax%', @array_pop( $resources_tax_term )->slug, $post_link );
+    }
+    return $post_link;
+}
+
+
+function add_webinar_category_automatically($post_ID) {
+  global $wpdb;
+    if(!has_term('','resources_tax',$post_ID)){
+      $cat = 16; // All
+      wp_set_object_terms($post_ID, $cat, 'resources_tax');
+    }
+}
+add_action('publish_webinar', 'add_webinar_category_automatically');
+
+/*
+function set_resources_default_category($post_id, $post) {
+		
+		
+	// If this is a revision, get real post ID
+	if ( $parent_id = wp_is_post_revision( $post_id ) ) 
+		$post_id = $parent_id;
+
+	if ($post->post_type == 'resources') {
+
+        $taxonomies = get_object_taxonomies( $post->post_type );
+        foreach ( (array) $taxonomies as $taxonomy ) {
+			
+            $terms = wp_get_post_terms( $post_id, $taxonomy );
+			$found = false;
+			foreach($terms as $term) {
+				if ($term->slug == 'all') $found = true;
+				$defaults['resources_tax'][] = $term->slug;
+			}
+			if (!$found)
+				$defaults['resources_tax'][] = 'all';
+			
+            if (array_key_exists( $taxonomy, $defaults ) ) {
+                wp_set_object_terms( $post_id, $defaults[$taxonomy], $taxonomy );
+           }
+        }
+	}
+}
+add_action('save_post', 'set_resources_default_category', 100, 2);
+*/
+
+
 /*
  * --------------- tweeking and utilities ------------------
  */
  
+function worldwide_append_query_string($url) {
+	$doc_type = get_field('document_type');
+	if ($doc_type == 'url') {
+		return get_field('document_url');
+	}
+	if ($doc_type == 'file' || $doc_type == 'video') {
+		return get_field('document_attachment');
+	}
+	
+    return add_query_arg($_GET, $url);
+}
+add_filter('the_permalink', 'worldwide_append_query_string');
+
+
+function get_post_read_label($post_id, $default_label = "Read More") {	
+	$label = get_field('document_link_label', $post_id);
+	if ($label)
+		return $label;
+	return $default_label;
+}
+
+ 
+
 /*
  * menu fix - aligning to existing css
  */

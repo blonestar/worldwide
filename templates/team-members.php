@@ -26,17 +26,18 @@
 			</div>
 			<?php } ?>
 		</div>
-		<?php
-			$query = new WP_Query(array(
-							'post_type' => 'team_members',
-							'orderby'	=> 'menu_order',
-							'order'		=> 'asc'
-						));
-			if ( $query->have_posts() ) {
-		?>
 	</div>
 </div>
 
+<?php
+
+$query = new WP_Query(array(
+				'post_type' => 'team_members',
+				'orderby'	=> 'menu_order',
+				'order'		=> 'asc'
+			));
+if ( $query->have_posts() ) {
+?>
 <div class="container-wrapper standard-container-wrapper ">
 	<div class="container">
 		<div class="row">
@@ -56,9 +57,9 @@
 			
 			<?php } ?>
 		</div>
-		<?php } ?>
 	</div>
 </div>
+<?php } ?>
 	
 <?php if( have_rows('template_blocks') ): ?>
 	<?php get_template_blocks(get_the_ID()) ?>
