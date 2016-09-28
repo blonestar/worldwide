@@ -599,6 +599,66 @@ function add_webinar_category_automatically($post_ID) {
 }
 add_action('publish_webinar', 'add_webinar_category_automatically');
 
+
+
+// Register Custom Post Type
+function assay_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Assays', 'Post Type General Name', 'worldwide' ),
+		'singular_name'         => _x( 'Assay', 'Post Type Singular Name', 'worldwide' ),
+		'menu_name'             => __( 'Assays', 'worldwide' ),
+		'name_admin_bar'        => __( 'Assays', 'worldwide' ),
+		'archives'              => __( 'Item Archives', 'worldwide' ),
+		'parent_item_colon'     => __( 'Parent Item:', 'worldwide' ),
+		'all_items'             => __( 'All Assays', 'worldwide' ),
+		'add_new_item'          => __( 'Add New', 'worldwide' ),
+		'add_new'               => __( 'Add New', 'worldwide' ),
+		'new_item'              => __( 'New', 'worldwide' ),
+		'edit_item'             => __( 'Edit', 'worldwide' ),
+		'update_item'           => __( 'Update', 'worldwide' ),
+		'view_item'             => __( 'View', 'worldwide' ),
+		'search_items'          => __( 'Search', 'worldwide' ),
+		'not_found'             => __( 'Not found', 'worldwide' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'worldwide' ),
+		'featured_image'        => __( 'Featured Image', 'worldwide' ),
+		'set_featured_image'    => __( 'Set featured image', 'worldwide' ),
+		'remove_featured_image' => __( 'Remove featured image', 'worldwide' ),
+		'use_featured_image'    => __( 'Use as featured image', 'worldwide' ),
+		'insert_into_item'      => __( 'Insert into item', 'worldwide' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'worldwide' ),
+		'items_list'            => __( 'Items list', 'worldwide' ),
+		'items_list_navigation' => __( 'Items list navigation', 'worldwide' ),
+		'filter_items_list'     => __( 'Filter items list', 'worldwide' ),
+	);
+	$args = array(
+		'label'                 => __( 'Assay', 'worldwide' ),
+		'description'           => __( 'Assays database', 'worldwide' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail', ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 20,
+		'menu_icon'             => 'dashicons-book',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => false,		
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'rewrite'               => false,
+		'capability_type'       => 'post',
+	);
+	register_post_type( 'assays', $args );
+
+}
+add_action( 'init', 'assay_post_type', 0 );
+
+
+
+
 /*
 function set_resources_default_category($post_id, $post) {
 		
@@ -716,3 +776,65 @@ class Walker_Worldwide_Menu extends Walker_Nav_Menu  {
 		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
     }
 }
+
+
+/*
+ * CSV parser - the REAL one!
+ * /
+function csv_to_array($filename='', $delimiter=',')
+{
+    if(!file_exists($filename) || !is_readable($filename))
+        return FALSE;
+
+    $header = NULL;
+    $data = array();
+    if (($handle = fopen($filename, 'r')) !== FALSE)
+    {
+        while (($row = fgetcsv($handle, 1000, $delimiter)) !== FALSE)
+        {
+            if(!$header)
+                $header = $row;
+            else
+                $data[] = array_combine($header, $row);
+        }
+        fclose($handle);
+    }
+    return $data;
+}
+
+$insert =  $_GET['insert'];
+
+if ($insert==2) {
+	$csv = csv_to_array(get_template_directory().'/assays.csv', ';');
+	foreach($csv as $line) {
+		$title = preg_replace('/\n+/', ', ', $line['AnalyteName']);
+
+			// Gather post data.
+		$post_data = array(
+			'post_type'		=> 'assays',
+			'post_title'    => $title,
+			//'post_content'  => $line['AnalyteName'],
+			'post_content'  => '',
+			'post_status'   => 'publish',
+			'post_author'   => 1,
+			'comment_status' => 'closed',
+			'ping_status' => 'closed'
+			//'post_category' => array( 8,39 )
+		);
+		 
+		 
+		// Insert the post into the database.
+		$post_id = wp_insert_post( $post_data );
+		update_field('assay_analytename', $line['AnalyteName'], $post_id);
+		update_field('assay_lloq', $line['LLOQ'], $post_id);
+		update_field('assay_uloq', $line['ULOQ'], $post_id);
+		update_field('assay_units', $line['Units'], $post_id);
+		update_field('assay_species', $line['Species'], $post_id);
+		update_field('assay_matrix', $line['Matrix'], $post_id);
+
+		
+	}
+}
+
+//exit;
+*/

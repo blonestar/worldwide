@@ -1,0 +1,808 @@
+AnalyteName;LLOQ;ULOQ;Units;Species;Matrix
+2-Phenylethylamine (PEA);0.2;100;ng/mL;Human;Urine
+"5-Aminosalicylic Acid (Mesalamine) 
+N-Acetyl-5-Aminosalicylic Acid";"4
+4";"2000
+
+2000";ng/mL;Human;EDTA Plasma
+5-Hydroxyindoleacetic Acid (5-HIAA);100;10000;ng/mL;Human;Urine
+5-Hydroxyindoleacetic Acid (5-HIAA);1;100;ng/mL;Human;EDTA Plasma
+5-Hydroxyindoleacetic Acid (5-HIAA);5;500;ng/mL;Human;Cerebrospinal Fluid
+6ß-Naltrexol;0.25;10;pg/mL;Human;EDTA Plasma
+Abiraterone;1;600;ng/mL;Human;EDTA Plasma
+Abiraterone;0.1;100;ng/mL;Human;EDTA Plasma
+Acetaminophen;0.025;15;µg/mL;Human;EDTA Plasma
+Acetazolamide;0.1;30;µg/mL;Human;EDTA Plasma
+Acetazolamide;0.1;30;µg/mL;Human;EDTA Whole Blood
+Acetylsalicylic Acid;1;500;ng/mL;Human;EDTA Plasma
+Acetylsalicylic Acid;20;10000;ng/mL;Human;Treated Plasma
+"Acitretin
+13-cis-Acitretin";"1
+1";"500
+5";ng/mL;Human;Heparin Plasma
+Acyclovir;5;500;ng/mL;Human;EDTA Plasma
+Albuterol;0.15;15;ng/mL;Human;EDTA Plasma
+Alendronate;0.05;50;ng/mL;Human;EDTA Plasma
+Alfuzosin;0.1;25;ng/mL;Human;EDTA Plasma
+Aliskiren;1;1000;ng/mL;Human;EDTA Plasma
+all-trans-Retinoic Acid;2;50;ng/mL;Rat;EDTA Plasma
+all-trans-Retinoic Acid;2;500;ng/mL;Human;Heparin Plasma
+Almotriptan;0.5;200;ng/mL;Human;EDTA Plasma
+Alprazolam;0.5;50;ng/mL;Human;EDTA Plasma
+Alvimopan;0.1;20;ng/mL;Human;EDTA Plasma
+"Amantadine
+N-Acetylamantadine";"5
+5";"300
+300";ng/mL;Human;EDTA Plasma
+Amlodipine;0.25;25;ng/mL;Human;EDTA Plasma
+"Amphetamine
+Lisdexamphetamine";"1
+1";"100
+100";ng/mL;Human;EDTA Plasma
+Amphotericin B;20;2000;ng/mL;Human;EDTA Plasma
+Anagrelide;0.05;10;ng/mL;Human;EDTA Plasma
+Apixaban;0.5;500;ng/mL;Human;EDTA Plasma
+Apomorphine;2.63E-2;13.1;ng/mL;Human;EDTA Plasma
+Apomorphine;1;500;ng/mL;Human;Treated Plasma
+Apomorphine (Total);1;500;ng/mL;Human;EDTA Plasma
+Aripiprazole;1;250;ng/mL;Human;EDTA Plasma
+Armodafinil;25;7500;ng/mL;Human;EDTA Plasma
+"Asenapine
+N-desmethyl Asenapine";"0.05
+0.1";"25
+50";ng/mL;Human;EDTA Plasma
+Atenolol;10;1250;ng/mL;Human;EDTA Whole Blood
+"Atomoxetine
+N-Desmethylatomoxetine";"2.00
+2.00";"400
+400";ng/mL;Human;EDTA Plasma
+"Atorvastatin
+o-OH-Atorvastatin
+p-OH-Atorvastatin";"0.5
+0.1
+0.02";"150
+30
+6";ng/mL;Human;EDTA Plasma
+Atovaquone;0.1;25;µg/mL;Human;EDTA Plasma
+"Azelastine
+Desmethylazelastine";1;600;pg/mL;Human;EDTA Plasma
+Azithromycin;5;2000;ng/mL;Human;EDTA Plasma
+"Benazepril
+Benazeprilat";"2
+2.5";"1000
+1250";ng/mL;Human;EDTA Plasma
+Betrixaban;0.1;50;ng/mL;Human;EDTA Plasma
+Bexarotene;3;1500;ng/mL;Human;Heparin Plasma
+Bicalutamide;5;1000;ng/mL;Human;EDTA Plasma
+Bisoprolol;0.25;100;ng/mL;Human;EDTA Plasma
+Bosentan;20;2500;ng/mL;Human;EDTA Plasma
+"Brompheniramine
+Pseudoephedrine";"0.5
+5.00";"25
+400";ng/mL;Human;EDTA Plasma
+Budesonide;0.01;5;ng/mL;Human;EDTA Plasma
+Bumetanide;0.5;500;ng/mL;Human;Urine
+Bupivacaine;1;500;ng/mL;Human;EDTA Plasma
+"Buprenorphine
+Norbuprenorphine";"0.0125
+0.02";"2.50
+4.00";ng/mL;Human;EDTA Plasma
+"Buprenorphine
+Norbuprenorphine";"0.025
+0.02";"5
+4";ng/mL;Human;EDTA Plasma
+"Buprenorphine
+Norbuprenorphine";"0.05
+0.04";"25
+20";ng/mL;Human;EDTA Plasma
+"Buprenorphine
+Norbuprenorphine";"0.1
+0.08";"50
+40";ng/mL;Beagle;EDTA Plasma
+"Buprenorphine
+Norbuprenorphine
+Naloxone";"20
+20
+2";"10000
+10000
+1000";pg/mL;Human;EDTA Plasma
+"Bupropion
+Hydroxybupropion";"2
+4";"500
+1000";ng/mL;Human;EDTA Plasma
+"Bupropion
+Hydroxybupropion
+erythro-Hydrobupropion
+threo-Hydrobupropion";"2
+4
+2
+2";"1000
+2000
+1000
+1000";ng/mL;Human;EDTA Plasma
+"Caffeine
+Paraxanthine
+Theobromine";"30
+10
+10";"15000
+5000
+5000";ng/mL;Human;EDTA Plasma
+Cannabidiol;0.1;50;ng/mL;Human;EDTA Plasma
+Carbamazepine;20;4000;ng/mL;Human;EDTA Plasma
+Carbamazepine;40;8000;ng/mL;Human;EDTA Plasma
+"Carbamazepine
+Carbamazepine Epoxide";"20
+2";"8000
+800";ng/mL;Human;EDTA Plasma
+"Carbinoxamine
+Dextromethorphan
+Pseudoephedrine";"10
+20
+1000";"10000
+5000
+100000";pg/mL;Human;EDTA Plasma
+"Carvedilol
+ 4'-Hydroxycarvedilol";"0.5
+0.05";"150
+10";ng/mL;Human;EDTA Plasma
+Cefuroxime;0.1;10;µg/mL;Human;EDTA Plasma
+Celecoxib;10;1500;ng/mL;Human;EDTA Plasma
+Cephalexin;0.25;50;µg/mL;Human;EDTA Plasma
+"Cetirizine
+Pseudoephedrine";"2
+2";"500
+500";ng/mL;Human;EDTA Plasma
+Cevimeline;1;200;ng/mL;Human;EDTA Plasma
+Chlorpheniramine;0.25;50;ng/mL;Human;EDTA Plasma
+Cilostazol;2;1000;ng/mL;Human;Heparin Plasma
+"Cilostazol
+3,4-Dehydrocilostazol (OPC 13015)
+4’-trans-Hydroxycilostazol (OPC 13213)";"2
+2
+1";"1000 
+300 
+150";ng/mL;Human;EDTA Plasma
+Cimetidine;5;1000;ng/mL;Human;EDTA Plasma
+Cimetidine;5;1000;ng/mL;Human;Urine
+Cimetidine;5;1000;ng/mL;Human;Heparin Plasma
+Ciprofloxacin;0.01;5;µg/mL;Human;EDTA Plasma
+Citalopram;1;100;ng/mL;Human;EDTA Plasma
+"Citalopram
+Desmethylcitalopram
+Didesmethylcitalopram";"1
+0.25
+0.25";"100 
+25
+25";ng/mL;Human;EDTA Plasma
+Clarithromycin;20;4000;ng/mL;Human;EDTA Plasma
+Clindamycin;0.05;20;µg/mL;Human;Heparin Plasma
+"Clindamycin
+Butoconazole";"0.1
+0.1";"20
+20";ng/mL;Human;EDTA Plasma
+"Clobazam
+N-Desmethylclobazam";"1
+1";"500
+500";ng/mL;Human;EDTA Plasma
+Clonidine;8;1500;pg/mL;Human;EDTA Plasma
+"Clopidogrel
+Clopidogrel Carboxylic Acid";"0.18
+180";"36
+36000";ng/mL;Human;EDTA Plasma
+"Cocaine
+EME";"5
+1";"1000
+200";ng/mL;Human;Treated Plasma
+Codeine;1;500;ng/mL;Human;EDTA Plasma
+Cyclosporin A;5;2500;ng/mL;Human;EDTA Whole Blood
+Dabigatran;0.5;400;ng/mL;Human;Treated sodium fluoride/potassium oxalate plasma
+Dabigatran (Total);0.5;400;ng/mL;Human;Treated sodium fluoride/potassium oxalate plasma
+Dalfampridine;0.2;50;ng/mL;Human;EDTA Plasma
+"D-amphetamine 
+L-amphetamine";"0.5 
+0.2";"80
+32";ng/mL;Pig;EDTA Plasma
+"D-amphetamine
+L-amphetamine";"0.5
+0.2";"80
+32";ng/mL;Human;EDTA Plasma
+Darifenacin;0.01;20;ng/mL;Human;EDTA Plasma
+Dasatinib;0.2;200;ng/mL;Human;EDTA Plasma
+"delta9-THC (Dronabinol)
+11-OH-delta9-THC";"0.025
+0.025";"10
+10";ng/mL;Human;EDTA Plasma
+Demeclocycline;50;5000;ng/mL;Human;EDTA Plasma
+Deracoxib;2.5000000000000001E-2;10;µg/mL;Beagle;Heparin Plasma
+Dexmethylphenidate;0.25;50;ng/mL;Human;EDTA Plasma
+DHPG;200;10000;pg/mL;Human;Treated Plasma
+"Diazepam
+Nordiazepam";"1
+1";"500
+500";ng/mL;Human;EDTA Plasma
+"Diazepam
+Nordiazepam
+Oxazepam
+Temazepam";"1
+1
+1
+1";"500
+500
+500
+500";ng/mL;Human;EDTA Plasma
+Diclofenac;5;2500;ng/mL;Human;EDTA Plasma
+Diclofenac;20;20000;ng/mL;Human;EDTA Plasma
+"Diethylpropion
+diethylnorpseudoephedrine
+2 (ethylamino)propiophenone";"0.1
+0.2
+0.4";"15
+30
+200";ng/mL;Human;EDTA Plasma
+Digoxin;0.05;8;ng/mL;Human;EDTA Plasma
+"Dihydroxyphenylacetic Acid (DOPAC)
+Homovanillic Acid (HVA)";"0.1 
+5";"10
+500";ng/mL;Human;Cerebrospinal Fluid
+"Dihydroxyphenylacetic Acid (DOPAC)
+Homovanillic Acid (HVA)";"0.400
+4.00";"40.0
+400";ng/mL;Human;EDTA Plasma
+"Diltiazem
+Desacetyldiltiazem
+Desmethyldiltiazem";"5
+0.5
+1.5";"250 
+25
+75";ng/mL;Human;Treated Plasma
+Diphenhydramine;0.4;100;ng/mL;Human;EDTA Plasma
+Dipyridamole;10;5000;ng/mL;Human;EDTA Plasma
+Disopyramide;10;2000;ng/mL;Human;EDTA Plasma
+Donepezil;0.25;100;ng/mL;Human;EDTA Plasma
+"Donepezil
+Memantine";"0.2
+0.5";"40
+100";ng/mL;Human;EDTA Plasma
+Dopamine;0.02;1;ng/mL;Human;EDTA Plasma
+"Doxorubicin
+Doxorubicinol";"1
+ 0.5";"500
+250";ng/mL;Human;EDTA Plasma
+Doxycycline;10;2000;ng/mL;Human;EDTA Plasma
+"Dronedarone 
+N-Desbutyl Dronedarone";"1.06
+1.07";"530 
+535";ng/mL;Human;EDTA Plasma
+"d-threo-Methylphenidate
+l-threo-Methylphenidate";"0.25
+0.01";"50
+2";ng/mL;Human;EDTA Plasma
+Duloxetine;0.5;75;ng/mL;Human;EDTA Plasma
+Dutasteride;2.5000000000000001E-2;5;ng/mL;Human;EDTA Plasma
+Efavirenz;100;20000;ng/mL;Human;EDTA Plasma
+Eletriptan;0.5;250;ng/mL;Human;EDTA Plasma
+"Emtricitabine
+Tenofovir";"5
+0.5";"5000
+500";ng/mL;Human;EDTA Plasma
+"Enalapril
+Enalaprilat";"0.75
+1";"300 
+400";ng/mL;Human;EDTA Plasma
+"Enalapril
+Enalaprilat";"0.25
+0.5";"100
+200";ng/mL;Human;EDTA Plasma
+Entacapone;25;2000;ng/mL;Human;EDTA Plasma
+"EPA (Total)
+DHA (Total)";"1
+2";"200
+400";µg/mL;Human;EDTA Plasma
+"EPA
+DHA";"10
+30";"1000
+3000";ng/mL;Human;EDTA Plasma
+EPA-EE;0.5;500;ng/mL;Human;EDTA Plasma
+"EPA-EE
+DHA-EE";"0.5
+0.5";"500
+500";ng/mL;Human;EDTA Plasma
+"E-Phytonadione
+Z-Phytonadione";"0.5
+0.3";"150
+90";ng/mL;Human;EDTA Plasma
+Epirubicin;1;500;ng/mL;Human;Heparin Plasma
+Estrone (Total);0.06;60;ng/mL;Human;EDTA Plasma
+Estrone Sulfate;75;3750;pg/mL;Human;EDTA Plasma
+"Estrone
+Estradiol";"5
+5";"500
+500";pg/mL;Human;EDTA Plasma
+Eszopiclone;0.2;100;ng/mL;Human;Treated Plasma
+Ethinyl Estradiol;10;100;pg/mL;Human;EDTA Plasma
+Everolimus;0.1;20;ng/mL;Human;EDTA Whole Blood
+Everolimus;0.5;200;ng/mL;Human;EDTA Whole Blood
+Exemestane;0.5;70;ng/mL;Human;EDTA Plasma
+Ezetimibe;0.05;20;ng/mL;Human;EDTA Plasma
+Ezetimibe (Total);0.2;100;ng/mL;Human;EDTA Plasma
+Famotidine;2;300;ng/mL;Human;EDTA Plasma
+Felodipine;0.1;10;ng/mL;Human;EDTA Plasma
+Fenofibric Acid;100;10000;ng/mL;Human;EDTA Plasma
+Fentanyl;0.06;60;ng/mL;Mouse;EDTA Plasma
+Fentanyl;2.5000000000000001E-2;5;ng/mL;Human;EDTA Plasma
+"Fesoterodine
+5-hydroxymethyltolterodine";"0.002
+0.02";"2
+20";ng/mL;Human;Treated Plasma
+"Fexofenadine
+Pseudoephedrine";"2
+1";"1600
+800";ng/mL;Human;EDTA Plasma
+Finasteride;0.1;100;ng/mL;Human;EDTA Plasma
+"Fingolimod
+Fingolimod Phosphate";"20
+30";"8000
+12000";pg/mL;Human;EDTA Whole Blood
+Fluconazole;100;25000;ng/mL;Human;EDTA Plasma
+"Fluoxetine
+Norfluoxetine";"0.25
+0.25";"100
+100";ng/mL;Human;Heparin Plasma
+Fluticasone Propionate;1.5;200;pg/mL;Human;EDTA Plasma
+"Fluticasone Propionate
+Salmeterol";"0.5
+0.5";"200
+200";pg/mL;Human;EDTA Plasma
+Fluvastatin;0.5;300;ng/mL;Human;EDTA Plasma
+Formoterol;0.5;100;pg/mL;Human;Treated EDTA Plasma
+Fulvestrant;0.1;10;ng/mL;Human;EDTA Plasma
+Gabapentin;50;12000;ng/mL;Human;EDTA Plasma
+Galanthamine;0.5;50;ng/mL;Human;EDTA Plasma
+Ganciclovir;10;2000;ng/mL;Human;EDTA Plasma
+Ganciclovir;40;4000;ng/mL;Human;EDTA Plasma
+Glimepiride;2.5;250;ng/mL;Human;EDTA Plasma
+"Glyburide
+Metformin";"2
+20";"150
+1500";ng/mL;Human;EDTA Plasma
+"Granisetron
+7-Hydroxygranisetron";"0.05
+0.01";"10.0 
+2.00";ng/mL;Human;EDTA Plasma
+Griseofulvin;25;2500;ng/mL;Human;EDTA Plasma
+Guaifenesin;10;4000;ng/mL;Human;EDTA Plasma
+Guanfacine;0.05;50;ng/mL;Human;EDTA Plasma
+Homoarginine;100;10000;ng/mL;Human;EDTA Plasma
+Hydrochlorothiazide;1;400;ng/mL;Human;EDTA Plasma
+Hydrocodone;0.5;100;ng/mL;Beagle;EDTA Plasma
+Hydrocodone;0.1;50;ng/mL;Human;EDTA Plasma
+Hydrocodone;1;200;ng/mL;Human;EDTA Plasma
+"Hydrocodone
+Chlorpheniramine";"0.25
+0.25";"50
+50";ng/mL;Human;EDTA Plasma
+Hydromorphone;0.1;125;ng/mL;Rat;Heparin Plasma
+Hydromorphone;0.04;10;ng/mL;Mouse;Heparin Plasma
+Hydromorphone;0.05;10;ng/mL;Human;EDTA Plasma
+"Hydromorphone
+Hydromorphone-3?-D-Glucuronide";"0.05
+0.5";"10
+100";ng/mL;Human;EDTA Plasma
+Ibandronate;10;2000;pg/mL;Human;EDTA Plasma
+Ibuprofen;250;50000;ng/mL;Human;Heparin Plasma
+Ibuprofen;250;50000;ng/mL;Human;EDTA Plasma
+"Imatinib
+N-desmethylimatinib";"10
+10";"5000
+5000";ng/mL;Human;EDTA Plasma
+Indomethacin;20;4000;ng/mL;Human;EDTA Plasma
+Irbesartan;50;8000;ng/mL;Human;EDTA Plasma
+"Irinotecan
+SN-38";"2
+1";"1000 
+500";ng/mL;Human;EDTA Plasma
+"Irinotecan
+SN-38";"10
+5";"5000
+2500";ng/mL;Human;EDTA Plasma
+"Irinotecan
+SN-38";"20
+1";"4000
+200";ng/mL;Human;EDTA Plasma
+Isradipine;0.15;10;ng/mL;Human;EDTA Plasma
+"Itraconazole
+Hydroxyitraconazole";"2
+2";"1000
+1000";ng/mL;Human;Heparin Plasma
+"Ketamine
+Norketamine";"0.5
+0.5";"250
+250";ng/mL;Human;EDTA Plasma
+Ketoconazole;0.2;50;µg/mL;Human;Heparin Plasma
+Ketoprofen;50;25000;ng/mL;Human;EDTA Plasma
+"Kynurenine
+Tryptophan";"4
+40";"2000
+20000";ng/mL;Human;EDTA Plasma
+Lamotrigine;7.5;3000;ng/mL;Human;EDTA Plasma
+Lansoprazole;5;2000;ng/mL;Human;Heparin Plasma
+Lansoprazole;5;2000;ng/mL;Human;EDTA Plasma
+Lenalidomide;1;1000;ng/mL;Human;EDTA Plasma
+Letrozole;0.5;50;ng/mL;Human;EDTA Plasma
+Levetiracetam;0.05;30;µg/mL;Human;EDTA Plasma
+Levetiracetam;0.05;30;µg/mL;Human;EDTA Plasma
+Levocetirizine;2;500;ng/mL;Human;EDTA Plasma
+"Levodopa
+Carbidopa";2;400;ng/mL;Human;EDTA Plasma
+"Levodopa
+Dopamine";0.1;5;ng/mL;Human;Cerebrospinal Fluid
+"Levodopa
+Dopamine";"0.2
+ 0.1";"10
+5";ng/mL;Human;EDTA Plasma
+Levofloxacin;0.1;10;µg/mL;Human;EDTA Plasma
+Levorphanol;25;25000;pg/mL;Human;EDTA Plasma
+Lidocaine;0.1;10;ng/mL;Human;EDTA Plasma
+Lidocaine;0.2;200;ng/mL;Human;EDTA Plasma
+Linagliptin;0.5;500;ng/mL;Human;EDTA Plasma
+Lisinopril;0.5;300;ng/mL;Human;EDTA Plasma
+Lofexidine;50;10000;pg/mL;Human;Heparin Plasma
+"Lopinavir
+Ritonavir";"30
+30";"15000
+15000";ng/mL;Human;EDTA Plasma
+"Losartan
+Losartan Acid";"5
+5";"1000
+1000";ng/mL;Human;EDTA Plasma
+"Lovastatin
+Lovastatin Acid";"0.05
+0.05";"50
+50";ng/mL;Human;Heparin Plasma
+Lurasidone;0.5;500;ng/mL;Human;EDTA Plasma
+Mefenamic Acid;50;7500;ng/mL;Human;EDTA Plasma
+Meloxicam;5;3000;ng/mL;Human;EDTA Plasma
+Memantine;0.5;100;ng/mL;Human;EDTA Plasma
+Metaxalone;10;8000;ng/mL;Human;EDTA Plasma
+Metformin;20;1500;ng/mL;Human;EDTA Plasma
+Metformin;20;3000;ng/mL;Human;EDTA Plasma
+Methadone;0.5;150;ng/mL;Human;EDTA Plasma
+Methadone;3;900;ng/mL;Human;EDTA Plasma
+"Methotrexate
+ 7-hydroxymethotrexate";"0.5
+0.5";"500
+500";ng/mL;Human;EDTA Plasma
+Methylhomatropine;0.02;2;ng/mL;Human;EDTA Plasma
+Methylnaltrexone;0.1;100;ng/mL;Human;EDTA Plasma
+Methylphenidate;0.25;25;ng/mL;Human;EDTA Plasma
+Methylphenidate;0.1;10;ng/mL;Human;EDTA Plasma
+Methylphenidate;0.5;50;ng/mL;Human;EDTA Plasma
+Metoprolol;0.5;500;ng/mL;Human;EDTA Plasma
+Metronidazole;1;500;ng/mL;Human;EDTA Plasma
+Metronidazole;0.5;200;ng/mL;Human;EDTA Plasma
+Metronidazole;0.1;15;µg/mL;Human;EDTA Plasma
+"Midazolam
+1-Hydroxymidazolam";"0.05
+0.05";"10
+10";ng/mL;Human;Heparin Plasma
+"Midazolam
+1-Hydroxymidazolam";"0.2
+0.2";"40
+40";ng/mL;Human;EDTA Plasma
+Minocycline;5;1500;ng/mL;Human;EDTA Plasma
+Minocycline;5;2500;ng/mL;Human;EDTA Plasma
+Mirabegron;0.2;100;ng/mL;Human;Treated Plasma
+Misoprostoic Acid;10;600;pg/mL;Human;EDTA Plasma
+"Modafinil
+Modafinil Sulfone 
+Modafinil Acid";"0.2
+0.2
+0.2";"50
+50
+50";µg/mL;Human;Heparin Plasma
+Mometasone Furoate;1.5;30;pg/mL;Human;EDTA Plasma
+Montelukast;1;350;ng/mL;Human;EDTA Plasma
+"Morphine
+Codeine";"0.2
+ 0.1";"50
+12.5";ng/mL;Human;EDTA Plasma
+"Morphine
+Morphine 6b-glucuronide
+Oxycodone";"0.3
+1
+0.3";"60
+200
+60";ng/mL;Human;EDTA Plasma
+"Morphine
+Morphine-6ß-glucuronide";"0.3
+1";"60
+00";ng/mL;Human;EDTA Plasma
+"Morphine
+Morphine-6ß-glucuronide";"0.05
+0.2";"25
+100";ng/mL;Human;EDTA Plasma
+"Morphine
+Morphine-6ß-glucuronide";"1
+5";"100 
+500";ng/mL;Human;EDTA Plasma
+Moxifloxacin;25;5000;ng/mL;Human;EDTA Plasma
+"Mycophenolate Mofetil
+Mycophenolic Acid";"1
+20";"500
+10000";ng/mL;Human;EDTA Plasma
+Mycophenolic Acid;40;20000;ng/mL;Human;EDTA Plasma
+Naloxone;20;500;pg/mL;Human;EDTA Plasma
+Naloxone;0.25;50;pg/mL;Human;EDTA Plasma
+Naloxone;0.5;250;pg/mL;Human;EDTA Plasma
+Naloxone;1;250;pg/mL;Human;EDTA Plasma
+Naloxone;0.01;10;ng/mL;Human;EDTA Plasma
+Naloxone;1;400;pg/mL;Human;EDTA Plasma
+Naloxone;0.2;200;ng/mL;Beagle;EDTA Plasma
+Naloxone;0.05;50;ng/mL;Human;EDTA Plasma
+Naloxone;0.3;150;ng/mL;Rat;Treated Plasma
+Naloxone (Total);0.05;50;ng/mL;Human;EDTA Plasma
+"Naloxone
+Naloxone 3-glucuronide";"1
+50";"500
+25000";pg/mL;Human;EDTA Plasma
+"Naltrexone 
+6ß-Naltrexol";"4
+10";"500
+4000";pg/mL;Human;EDTA Plasma
+"Naltrexone
+6ß-Naltrexol";"0.02
+0.02";"2 
+4";ng/mL;Human;EDTA Plasma
+"Naltrexone
+6ß-Naltrexol";"0.05
+0.5";"20
+200";ng/mL;Human;EDTA Plasma
+Naproxen;0.5;50;µg/mL;Human;Urine
+Naproxen;0.5;100;µg/mL;Human;EDTA Plasma
+Nateglinide;0.05;10;µg/mL;Human;EDTA Plasma
+Nebivolol;0.1;25;ng/mL;Human;EDTA Plasma
+"Nelfinavir
+Saquinavir
+Ritonavir";"10
+5
+10";"6000
+3000
+6000";ng/mL;Human;EDTA Plasma
+"Nicotine
+Cotinine";"0.5
+2.5";"100
+500";ng/mL;Human;EDTA Plasma
+"Nicotinic Acid 
+Nicotinuric Acid";"50
+15";"15000 
+4500";ng/mL;Human;Heparin Plasma
+Nifedipine;1;250;ng/mL;Human;EDTA Plasma
+Nilotinib;1;1000;ng/mL;Human;EDTA Plasma
+"Norepinephrine
+DHPG";"40
+200";"2000
+10000";pg/mL;Human;Cerebrospinal Fluid
+"Norepinephrine
+DHPG";"40
+200";"2000 
+10000";pg/mL;Human;EDTA Plasma
+Norethindrone;0.25;50;ng/mL;Human;EDTA Plasma
+Norethindrone;2.5000000000000001E-2;7.5;ng/mL;Human;EDTA Plasma
+Norgestrel;50;5000;pg/mL;Human;EDTA Plasma
+"Norgestrel
+Norelgestromin";"50
+30";"2500
+1500";pg/mL;Human;EDTA Plasma
+Olanzapine;0.25;50;ng/mL;Human;EDTA Plasma
+Omeprazole;1;500;ng/mL;Human;Heparin Plasma
+Omeprazole;50;10000;ng/mL;Human;EDTA Plasma
+Omeprazole;4;4000;ng/mL;Human;EDTA Plasma
+Ondansetron;0.5;250;ng/mL;Human;EDTA Plasma
+"Oseltamivir
+Oseltamivir Acid";"1
+5";"200
+1000";ng/mL;Human;Treated Plasma
+"Oxcarbazepine
+10, 11-Dihydro-10-Hydroxycarbamazepine";"5
+30";"2500
+15000";ng/mL;Human;EDTA Plasma
+"Oxybutynin
+Desethyloxybutynin";"0.05
+0.2";"25
+100";ng/mL;Human;EDTA Plasma
+Oxycodone;0.25;125;ng/mL;Human;EDTA Plasma
+"Oxycodone
+Oxymorphone
+Noroxycodone";"0.25
+0.05
+0.5";"125
+25
+250";ng/mL;Beagle;EDTA Plasma
+"Oxycodone
+Oxymorphone
+Noroxycodone";"0.25
+0.05
+0.5";"125
+25.0
+250";ng/mL;Human;EDTA Plasma
+Oxymetazoline;20;2000;pg/mL;Human;EDTA Plasma
+Oxymetholone;0.125;25;ng/mL;Human;EDTA Plasma
+"Oxymorphone
+6ß-Hydroxyoxymorphone";"0.025
+0.02";"15
+12";ng/mL;Human;EDTA Plasma
+Paclitaxel;1;1000;ng/mL;Human;EDTA Plasma
+Paliperidone (9-hydroxyrisperidone);0.1;25;ng/mL;Human;EDTA Plasma
+Palonosetron;15;1500;pg/mL;Human;EDTA Plasma
+Pantoprazole;50;5000;ng/mL;Human;EDTA Plasma
+Papaverine;0.2;100;ng/mL;Human;EDTA Plasma
+Paroxetine;0.1;60;ng/mL;Human;EDTA Plasma
+Pemetrexed;0.4;200;µg/mL;Human;EDTA Plasma
+Pemetrexed;0.4;200;µg/mL;Human;EDTA Plasma
+Phenoxybenzamine;2.5000000000000001E-2;15;ng/mL;Human;EDTA Plasma
+Phentermine;0.5;150;ng/mL;Human;EDTA Plasma
+Phenylephrine;1;300;ng/mL;Human;EDTA Plasma
+Phenytoin;10;4000;ng/mL;Human;EDTA Plasma
+Phenytoin;10;4000;ng/mL;Human;EDTA Ultrafiltrate
+Phenytoin;50;35000;ng/mL;Human;EDTA Plasma
+Pilocarpine;0.2;50;ng/mL;Human;EDTA Plasma
+Pioglitazone;10;3000;ng/mL;Human;EDTA Plasma
+"Pioglitazone
+Hydroxypioglitazone (MIV)
+Ketopioglitazone (MIII)";"10
+5
+2.5";"3000
+1500
+750";ng/mL;Human;EDTA Plasma
+Posaconazole;1;750;ng/mL;Human;EDTA Plasma
+Pramipexole;10;1000;pg/mL;Human;EDTA Plasma
+Pravastatin;0.5;200;ng/mL;Human;EDTA Plasma
+Pregabalin;50;15000;ng/mL;Human;EDTA Plasma
+Progesterone;0.1;50;ng/mL;Human;EDTA Plasma
+Promethazine;0.05;20;ng/mL;Human;EDTA Plasma
+Promethazine;0.1;55;ng/mL;Human;EDTA Plasma
+Propranolol;1;200;ng/mL;Human;EDTA Plasma
+Quetiapine;2;2000;ng/mL;Human;EDTA Plasma
+"Quetiapine
+7-hydroxyquetiapine
+7-hydroxy-N-desalkylquetiapine";"2
+0.5
+0.5";"1000
+250
+250";ng/mL;Human;Heparin Plasma
+Rabeprazole;5;1000;ng/mL;Human;Heparin Plasma
+Raloxifene;10;1000;pg/mL;Human;EDTA Plasma
+"Raloxifene-4'-Glucuronide
+Raloxifene-6'-Glucuronide";"1
+ 0.3";"400 
+120";ng/mL;Human;EDTA Plasma
+Raltegravir;10;5000;ng/mL;Human;EDTA Plasma
+Ranitidine;10;1500;ng/mL;Human;EDTA Plasma
+Ranolazine;10;3000;ng/mL;Human;EDTA Plasma
+Repaglinide;0.25;100;ng/mL;Human;EDTA Plasma
+Retigabine (Ezogabine);5;1500;ng/mL;Human;EDTA Plasma
+Ribavirin;5;1000;ng/mL;Human;EDTA Plasma
+Rifaximin;0.05;10;ng/mL;Human;EDTA Plasma
+Rilpivirine;1;500;ng/mL;Human;EDTA Plasma
+Risedronate;0.05;50;ng/mL;Human;EDTA Plasma
+Risedronic Acid;1;1000;ng/mL;Human;Urine
+Risperidone;0.1;20;ng/mL;Human;EDTA Plasma
+Rivaroxaban;0.5;500;ng/mL;Human;EDTA Plasma
+Rizatriptan;0.1;40;ng/mL;Human;EDTA Plasma
+Ropinirole;10;1000;pg/mL;Human;EDTA Plasma
+Rosuvastatin;0.1;20;ng/mL;Human;EDTA Plasma
+"R-Oxybutynin
+S-Oxybutynin
+R-Desethyloxybutynin
+S-Desethyloxybutynin";"0.03
+0.06
+0.1
+0.05";"1.2
+2.4
+4
+2";ng/mL;Human;EDTA Plasma
+Ruxolitinib;1;1000;ng/mL;Human;EDTA Plasma
+"R-Warfarin
+ S-Warfarin";"10
+10";"2000
+2000";ng/mL;Human;EDTA Plasma
+"Salicylic Acid
+Acetylsalicylic Acid";"3
+1";"1500
+500";ng/mL;Human;EDTA Plasma
+Saquinavir;0.05;25;ng/mL;Human;EDTA Plasma
+"Saxagliptin
+5-Hydroxy-Saxagliptin";"0.2
+0.4";"40
+80";ng/mL;Human;EDTA Plasma
+Serotonin (5-HT);0.05;25;ng/mL;Human;EDTA Plasma
+Serotonin (5-HT);5;250;pg/mL;Human;Cerebrospinal Fluid
+Sertraline;1;100;ng/mL;Human;EDTA Plasma
+"Sildenafil
+N-Desmethylsildenafil";"5
+2";"750
+300";ng/mL;Human;Heparin Plasma
+"Sildenafil
+N-Desmethylsildenafil";"1
+0.5";"750
+375";ng/mL;Human;EDTA Plasma
+"Simvastatin
+Simvastatin Acid";"0.15
+0.05";"60
+20";ng/mL;Human;EDTA Plasma
+Sirolimus;0.1;100;ng/mL;Human;EDTA Whole Blood
+Sitagliptin;1;500;ng/mL;Human;EDTA Plasma
+Sorafenib;10;5000;ng/mL;Human;EDTA Plasma
+"Spiranolactone
+Canrenone";"1
+2";"100
+200";ng/mL;Human;EDTA Plasma
+Spironolactone;2;100;ng/mL;Human;EDTA Plasma
+Stavudine (D4T);2;1200;ng/mL;Human;Heparin Plasma
+Sumatriptan;0.2;150;ng/mL;Human;EDTA Plasma
+Sumatriptan;0.1;30;ng/mL;Human;EDTA Plasma
+Tacrolimus;0.1;50;ng/mL;Human;EDTA Whole Blood
+Tadalafil;1;500;ng/mL;Human;EDTA Plasma
+Tamsulosin;0.1;25;ng/mL;Human;EDTA Plasma
+Tapentadol;0.2;200;ng/mL;Human;EDTA Plasma
+Temazepam;1;300;ng/mL;Human;EDTA Plasma
+Tenofovir;5;250;ng/mL;Human;EDTA Plasma
+Terbinafine;2.5;1250;ng/mL;Human;EDTA Plasma
+"Testosterone
+Dihydrotestosterone
+Testosterone undecanoate";"0.1
+0.1
+1.";"10
+10
+100";ng/mL;Human;EDTA Plasma
+Thalidomide;10;2000;ng/mL;Human;EDTA Plasma
+Thebaine;2.5000000000000001E-2;10;ng/mL;Human;EDTA Plasma
+"Thyroxine (T4)
+Triiodo-L-Thyronine (T3)";"10
+0.5";"300
+15";ng/mL;Human;Serum
+Tolbutamide;50;5000;ng/mL;Human;Heparin Plasma
+"Tolterodine
+HMT";"0.025
+0.025";"15
+15";ng/mL;Human;EDTA Plasma
+Topiramate;10;1000;ng/mL;Human;EDTA Plasma
+Topiramate;0.02;20;µg/mL;Human;EDTA Plasma
+"Tramadol
+O-desmethyltramadol (M1)";"4
+0.8";"2000
+400";ng/mL;Human;EDTA Plasma
+"Tramadol
+O-desmethyltramadol (M1)";"1
+0.2";"500 
+100";ng/mL;Human;EDTA Plasma
+Tranexamic Acid;50;10000;ng/mL;Human;EDTA Plasma
+Trazodone;10;3000;ng/mL;Human;EDTA Plasma
+Triamcinolone Acetonide;0.05;10;ng/mL;Human;EDTA Plasma
+Triamcinolone Acetonide;0.05;10;ng/mL;Pig;EDTA Plasma
+Triamterene;1;500;ng/mL;Human;EDTA Plasma
+Trospium;0.02;10;ng/mL;Human;EDTA Plasma
+Valproic Acid;0.75;75;µg/mL;Human;EDTA Plasma
+Valproic Acid;1.5;150;µg/mL;Human;EDTA Plasma
+Valsartan;40;8000;ng/mL;Human;EDTA Plasma
+Vardenafil;0.1;50;ng/mL;Human;EDTA Plasma
+Varenicline;0.05;10;ng/mL;Human;EDTA Plasma
+"Venlafaxine
+O-Desmethylvenlafaxine";"0.5
+1";"250
+500";ng/mL;Human;EDTA Plasma
+"Verapamil
+Norverapamil";"1
+1";"400
+400";ng/mL;Human;EDTA Plasma
+Vilazodone;0.25;50;ng/mL;Human;EDTA Plasma
+Vildagliptin;5;500;ng/mL;Human;Heparin Plasma
+Zanamivir;0.5;100;ng/mL;Human;EDTA Plasma
+Zidovudine (AZT);5;5000;ng/mL;Human;EDTA Plasma
+Ziprasidone;1;250;ng/mL;Human;EDTA Plasma
+"Zolmitriptan
+N-Desmethyl Zolmitriptan";"0.1
+0.05";"20
+10";ng/mL;Human;EDTA Plasma
+Zolpidem;1;400;ng/mL;Human;EDTA Plasma
+Zonisamide;10;2000;ng/mL;Human;Serum
