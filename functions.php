@@ -838,3 +838,92 @@ if ($insert==2) {
 
 //exit;
 */
+
+add_action('wp_ajax_nopriv_assays_ajax_search','assays_ajax_search');
+add_action('wp_ajax_assays_ajax_search','assays_ajax_search');
+function assays_ajax_search(){
+	
+	error_reporting(E_ALL);
+
+	$query = new WP_Query(array(
+						'post_type'			=> 'assays',
+						'posts_per_page'	=> -1,
+						'orderby'			=> 'name',
+						'order'				=> 'asc'
+					));	
+
+	while ( $query->have_posts() ) :
+		$query->the_post();
+		/*
+		$ret = "
+			<tbody>
+				<tr>
+					<td>" . get_the_title() . "</td>
+					<td>" . get_field('assay_lloq') . "</td>
+					<td>" . get_field('assay_uloq') . "</td>
+					<td>" . get_field('assay_units') . "</td>
+					<td>" . get_field('assay_species') . "</td>
+					<td>" . get_field('assay_matrix') . "</td>
+				</tr>
+			</tbody>
+		";*/
+		$return[] = array(
+					'name'		=> get_the_title(),
+					'lloq'		=> get_field('assay_lloq'),
+					'uloq'		=> get_field('assay_uloq'),
+					'units'		=> get_field('assay_units'),
+					'species'	=> get_field('assay_species'),
+					'matrix'	=> get_field('assay_matrix'),
+		);
+		
+		//echo @++$i;
+		//echo "<br>";
+		//if(json_encode($ret) === false)
+		//	die( 1111 );
+		//$return .= $ret;
+	endwhile;
+	
+	//echo $return;
+	
+	echo json_encode($return);
+	exit;
+}
+
+/*
+ * Resource Assays Ajax search (autocomplete)
+ */
+add_action('wp_ajax_nopriv_dhemy_ajax_search','dhemy_ajax_search');
+add_action('wp_ajax_dhemy_ajax_search','dhemy_ajax_search');
+function dhemy_ajax_search(){
+	 
+	// creating a search query
+	$args = array(
+		'post_type' 		=> 'assays',
+		'post_status' 		=> 'publish',
+		'order' 			=> 'DESC',
+		'orderby' 			=> 'date',
+		's' 				=> $_POST['term'],
+		'posts_per_page' 	=> 5
+	 
+	);
+	 
+	$query = new WP_Query( $args );
+	 
+	// display results
+	if($query->have_posts()){
+		 
+		while ($query->have_posts()) {
+			$query->the_post();
+			?>
+			<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+			<?php
+		}
+	} else {
+		 
+		?>
+		<li><a href="#">Use more key words</a></li>
+		<?php
+	 
+	}
+	exit;
+}

@@ -30,27 +30,27 @@
 				<div>
 					<div class="col-sm-12">
 					
-						<table>
-							<tr>
-								<th>Analyte Name</th>
-								<th>LLOQ</th>
-								<th>ULOQ</th>
-								<th>Units</th>
-								<th>Species</th>
-								<th>Matrix</th>
-								
-							</tr>
-					
-						<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-							<tr>
-								<td><?php the_title() ?></td>
-								<td><?php the_field('assay_lloq') ?></td>
-								<td><?php the_field('assay_uloq') ?></td>
-								<td><?php the_field('assay_units') ?></td>
-								<td><?php the_field('assay_species') ?></td>
-								<td><?php the_field('assay_matrix') ?></td>
-							</tr>
-						<?php endwhile; ?>
+						<table id="assays" class="display">
+							<thead>
+								<tr>
+									<th>Analyte Name</th>
+									<th>LLOQ</th>
+									<th>ULOQ</th>
+									<th>Units</th>
+									<th>Species</th>
+									<th>Matrix</th>
+								</tr>
+							</thead>
+							<tfoot>
+								<tr>
+									<th>Analyte Name</th>
+									<th>LLOQ</th>
+									<th>ULOQ</th>
+									<th>Units</th>
+									<th>Species</th>
+									<th>Matrix</th>
+								</tr>
+							</tfoot>
 
 						</table>
 						
@@ -62,10 +62,35 @@
 		<?php endif; ?>
 	</div>
 </div>
+
 			
 	
 <?php if( have_rows('template_blocks') ): ?>
 	<?php get_template_blocks(get_the_ID()) ?>
 <?php endif; ?>
+
+
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.css"> 
+<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.js"></script>
+
+<script>
+	jQuery(document).ready(function($){
+		$('#assays').DataTable({
+			//"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+			ajax: {
+				url: BASE+'/wp-admin/admin-ajax.php?action=assays_ajax_search',
+				dataSrc: '',
+			},
+				columns: [
+					{ data: 'name' },
+					{ data: 'lloq' },
+					{ data: 'uloq' },
+					{ data: 'units' },
+					{ data: 'species' },
+					{ data: 'matrix' }
+				]
+		});
+	});
+</script>
 
 <?php get_footer() ?> 

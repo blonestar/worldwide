@@ -87,6 +87,6 @@ healthyStudies.tracking = (function ($) {
 
 })(jQuery);
 
-$(function () {
+jQuery(function ($) {
 	healthyStudies.tracking.init();
 });

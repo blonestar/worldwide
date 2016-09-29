@@ -106,5 +106,7 @@
 
 <?php wp_footer() ?>
 
+<script type="text/javascript">var BASE = "<?php echo home_url() ?>";</script>
+
 </body>
 </html>
