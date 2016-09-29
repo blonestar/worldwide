@@ -59,6 +59,13 @@
                         "operator": "==",
                         "value": "image"
                     }
+                ],
+                [
+                    {
+                        "field": "field_57d6ed8d58b44",
+                        "operator": "==",
+                        "value": "image_scroll"
+                    }
                 ]
             ],
             "wrapper": {
@@ -91,6 +98,13 @@
                         "operator": "==",
                         "value": "image"
                     }
+                ],
+                [
+                    {
+                        "field": "field_57d6ed8d58b44",
+                        "operator": "==",
+                        "value": "image_scroll"
+                    }
                 ]
             ],
             "wrapper": {
@@ -116,6 +130,13 @@
                         "field": "field_57d6ed8d58b44",
                         "operator": "==",
                         "value": "video"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_57d6ed8d58b44",
+                        "operator": "==",
+                        "value": "video_scroll"
                     }
                 ]
             ],
@@ -184,5 +205,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1474994678
+    "modified": 1475157879
 }

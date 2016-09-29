@@ -143,41 +143,7 @@ function get_template_blocks($page_id) {
 	
 }
 
-function get_template_block_by_id($block_id) {
-	
-	
-}
-/*
 function get_template_widgets($page_id) {
-	
-if( have_rows('widgets', $page_id) ):
-
-		while ( have_rows('widgets', $page_id) ) : the_row();
-
-			if (get_row_layout() == "widgets") {
-
-				$templ = get_sub_field('documents' );
-				if (get_sub_field('hide')  !== true)
-					get_template_widgets($templ->ID);
-				
-			} else {
-				
-				if (get_sub_field('hide')  !== true)
-					include(get_template_directory() . "/template-blocks/" . get_row_layout() . ".php");
-				
-			}
-			
-		endwhile;
-
-	endif;
-	
-}
-
-
-*/
-
-function get_template_widgets($page_id) {
-	
 	
 	if( have_rows('widgets', $page_id) ):
 
@@ -384,7 +350,7 @@ function in_the_news_post_type() {
 		'feeds'                 => true,
 	);
 	$args = array(
-		'label'                 => __( 'Article', 'worldwide' ),
+		'label'                 => __( 'In The News', 'worldwide' ),
 		'description'           => __( 'In The News', 'worldwide' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'excerpt', ),
@@ -579,7 +545,6 @@ function resources_taxonomy() {
 }
 add_action( 'init', 'resources_taxonomy', 0 );
 
-add_filter('post_type_link', 'events_permalink_structure', 10, 4);
 function events_permalink_structure($post_link, $post, $leavename, $sample)
 {
     if ( false !== strpos( $post_link, '%resources_tax%' ) ) {
@@ -588,6 +553,7 @@ function events_permalink_structure($post_link, $post, $leavename, $sample)
     }
     return $post_link;
 }
+add_filter('post_type_link', 'events_permalink_structure', 10, 4);
 
 
 function add_webinar_category_automatically($post_ID) {
@@ -696,17 +662,30 @@ add_action('save_post', 'set_resources_default_category', 100, 2);
  */
  
 function worldwide_append_query_string($url) {
+	
 	$doc_type = get_field('document_type');
 	if ($doc_type == 'url') {
-		return get_field('document_url');
+		return get_field('document_external_url');
 	}
-	if ($doc_type == 'file' || $doc_type == 'video') {
+	if ($doc_type == 'file') {
 		return get_field('document_attachment');
-	}
-	
+	}	
+	if ($doc_type == 'video') {
+		return get_field('document_video_url', false, false);
+	}	
     return add_query_arg($_GET, $url);
 }
 add_filter('the_permalink', 'worldwide_append_query_string');
+
+/*
+function append_query_string( $url, $post, $leavename=false ) {
+	if ( $post->post_type == 'post' ) {
+		$url = add_query_arg( 'foo', 'bar', $url );
+	}
+	return $url;
+}
+add_filter( 'post_link', 'append_query_string', 10, 3 );
+*/
 
 
 function get_post_read_label($post_id, $default_label = "Read More") {	
@@ -927,3 +906,63 @@ function dhemy_ajax_search(){
 	}
 	exit;
 }
+
+
+/*
+ * Excerpt stuff
+ */
+
+function wpdocs_excerpt_more( $more ) {
+    return '';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+if ( ! function_exists( 'pietergoosen_custom_wp_trim_excerpt' ) ) : 
+
+    function pietergoosen_custom_wp_trim_excerpt($pietergoosen_excerpt) {
+    global $post;
+    $raw_excerpt = $pietergoosen_excerpt;
+        if ( '' == $pietergoosen_excerpt ) {
+
+            $pietergoosen_excerpt = get_the_content('');
+            $pietergoosen_excerpt = strip_shortcodes( $pietergoosen_excerpt );
+            $pietergoosen_excerpt = apply_filters('the_content', $pietergoosen_excerpt);
+            $pietergoosen_excerpt = str_replace(']]>', ']]&gt;', $pietergoosen_excerpt);
+
+            //Set the excerpt word count and only break after sentence is complete.
+                $excerpt_word_count = 75;
+                $excerpt_length = apply_filters('excerpt_length', $excerpt_word_count); 
+                $tokens = array();
+                $excerptOutput = '';
+                $count = 0;
+
+                // Divide the string into tokens; HTML tags, or words, followed by any whitespace
+                preg_match_all('/(<[^>]+>|[^<>\s]+)\s*/u', $pietergoosen_excerpt, $tokens);
+
+                foreach ($tokens[0] as $token) { 
+
+                    if ($count >= $excerpt_word_count && preg_match('/[\?\.\!]\s*$/uS', $token)) { 
+                    // Limit reached, continue until  ? . or ! occur at the end
+                        $excerptOutput .= trim($token);
+                        break;
+                    }
+
+                    // Add words to complete sentence
+                    $count++;
+
+                    // Append what's left of the token
+                    $excerptOutput .= $token;
+                }
+
+            $pietergoosen_excerpt = trim(force_balance_tags($excerptOutput));
+
+            return $pietergoosen_excerpt;   
+
+        }
+        return apply_filters('pietergoosen_custom_wp_trim_excerpt', $pietergoosen_excerpt, $raw_excerpt);
+    }
+
+endif; 
+
+remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+add_filter('get_the_excerpt', 'pietergoosen_custom_wp_trim_excerpt'); 

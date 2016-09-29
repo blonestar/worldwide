@@ -506,9 +506,10 @@ if (is_tax()) {
 //echo get_queried_object()->slug;
 
 $header_type = get_field('header_type', $post_id); ?>
-<?php if ($header_type == 'image' && ! is_front_page()) { ?>
-<?php $header_image = get_field('header_image', $post_id); ?>
-<?php //print_r($header_image); ?>
+<?php 
+if ($header_type == 'image' && ! is_front_page()) {
+	$header_image = get_field('header_image', $post_id); 
+?>
 <div class="hero-image-webpart hero-sm dark-image mobile-scaled">
 	<div class="img-bg" style="background-image:url(<?php echo $header_image['url'] ?>); height: <?php echo $header_image['height'] ?>px"></div>
 	<?php if (get_field('header_text', $post_id)) { ?>
@@ -518,6 +519,24 @@ $header_type = get_field('header_type', $post_id); ?>
 		</div>
 	</div>
 	<?php } ?>
+</div>
+
+<?php
+} else if ($header_type == 'image_scroll') {
+	$header_image = get_field('header_image', $post_id); 
+?>
+<div class="hero-image-webpart hero-lg dark-image mobile-scaled">
+	<div class="img-bg" style="background-image:url(<?php echo $header_image['url'] ?>);"></div>
+	<?php if (get_field('header_text', $post_id)) { ?>
+	<div class="container">
+		<div class="hero-content">
+			<?php the_field('header_text', $post_id) ?>
+		</div>
+	</div>
+	<?php } ?>
+	<div class="down-arrow">
+		<span class="icon-down-arrow"></span>
+	</div>
 </div>
 
 <?php } else if ($header_type == 'video') { ?>

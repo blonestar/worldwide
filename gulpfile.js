@@ -127,6 +127,7 @@ gulp.task('styles', function () {
 
 gulp.task('scriptsJs', function() {
 	return 	gulp.src('./js/*.js')
+				.pipe('./js/!.min.js')
 				.pipe(concat('custom.js'))
 				//.pipe(gulp.dest('./js'))
 				.pipe(rename( {

@@ -18,19 +18,21 @@
 		'hide_empty' => false,
 	) );
 
+	$all_selected = is_tax() ? "" : " selected";
 ?>
 
 <div class="container-wrapper standard-container-wrapper ">
 	<div class="container">
 		<div class="tabs">
 			<div class="row">
-				<a class="tab selected" href="<?php echo site_url('resources/resource-library/all') ?>">All</a>
+				<a class="tab<?php echo $all_selected ?>" href="<?php echo site_url('resources/resource-library') ?>">All</a>
 				<?php
 					$i = 0;
 					foreach ($terms as $term) {
+						$active = ($term->term_id == get_queried_object()->term_id) ? ' selected' : '';
 						if (++$i==5) echo "<br>";
 				?>
-				<a class="tab" href="<?php echo site_url('resources/resource-library/' . $term->slug) ?>"><?php echo $term->name ?></a>
+				<a class="tab<?php echo $active ?>" href="<?php echo site_url('resources/resource-library/' . $term->slug) ?>"><?php echo $term->name ?></a>
 				<?php } ?>
 			</div>
 		</div>
@@ -56,7 +58,14 @@
 							<div class="library-title"><?php the_title() ?></div>
 							<div class="library-summary"><?php the_content() ?></div>
 							<div class='read-more '>
-								<a href="<?php the_permalink() ?>" target="_blank"><?php echo get_post_read_label(get_the_ID()); ?> &rsaquo;</a>
+								<?php if (get_field('document_type') == 'video') { ?>
+								<div class="view-video featured-resource">
+									<a href="<?php the_permalink() ?>" target="_blank" data-toggle="modal" data-target=".video-modal" data-title="<?php the_title() ?>"><?php echo get_post_read_label(get_the_ID()); ?> &rsaquo;</a>
+								</div>
+
+								<?php } else { ?>
+									<a href="<?php the_permalink() ?>" target="_blank"><?php echo get_post_read_label(get_the_ID()); ?> &rsaquo;</a>
+								<?php } ?>
 							</div>
 						</div>
 						<?php endwhile; ?>
@@ -65,7 +74,6 @@
 				</div>
 			</div>
 		</div>
-		
 		<?php endif; ?>
 	</div>
 </div>

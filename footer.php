@@ -1,9 +1,21 @@
-<?php 
-	wp_reset_query();
-	if (get_field('hide_footer_blocks') !== true) {
-		get_template_blocks(get_field('footer_template_block', 'option'));
-	}
-?>
+		<?php 
+			wp_reset_query();
+			if (get_field('hide_footer_blocks') !== true) {
+				get_template_blocks(get_field('footer_template_block', 'option'));
+			}
+		?>
+		
+		<div class="modal fade video-modal modal-fullscreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>  
+					<div class="modal-body">
+						<iframe class="video-iframe" allowtransparency="yes" frameborder="0" scrolling="no"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+		
 </div><!-- main content end -->
 
 

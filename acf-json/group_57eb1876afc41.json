@@ -5,7 +5,7 @@
         {
             "key": "field_57eb1951fe6da",
             "label": "\ufeffAnalyte Name",
-            "name": "assay_analytename",
+            "name": "assay_\ufeffanalytename",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -134,5 +134,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1475030322
+    "modified": 1475138973
 }
