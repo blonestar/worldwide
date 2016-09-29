@@ -10,7 +10,7 @@
 	
 	$terms = get_terms( array(
 		'taxonomy' => 'resources_tax',
-		'hide_empty' => true,
+		'hide_empty' => false,
 	) );
 ?>
 
