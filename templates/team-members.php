@@ -12,6 +12,7 @@
 		$main_col_width = 7;
 	}
 
+
 ?>
 
 <div class="container-wrapper standard-container-wrapper " style="background-color: <?php echo get_field('background_color') ?>">
@@ -34,7 +35,8 @@
 $query = new WP_Query(array(
 				'post_type' => 'team_members',
 				'orderby'	=> 'menu_order',
-				'order'		=> 'asc'
+				'order'		=> 'asc',
+				'posts_per_page'	=> -1
 			));
 if ( $query->have_posts() ) {
 ?>

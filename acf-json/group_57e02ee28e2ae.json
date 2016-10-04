@@ -953,6 +953,40 @@
                     "max": ""
                 },
                 {
+                    "key": "57edbc4fbee5b",
+                    "name": "widget_image",
+                    "label": "Widget - Image",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_57edbc72bee5c",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
                     "key": "57e86d0bc4147",
                     "name": "two_columns_image_and_text",
                     "label": "Two columns (Image and text)",
@@ -1235,5 +1269,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1474862992
+    "modified": 1475198116
 }

@@ -56,15 +56,22 @@
 						<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 						<div class="library-item">
 							<div class="library-title"><?php the_title() ?></div>
-							<div class="library-summary"><?php the_content() ?></div>
+							<?php if (has_excerpt()) { ?>
+							<div class="library-summary"><?php the_excerpt() ?></div>
+							<?php } else { ?>
+							<div class="library-summary"><?php echo wp_strip_all_tags(get_the_excerpt()) ?></div>
+							<?php }  ?>
 							<div class='read-more '>
-								<?php if (get_field('document_type') == 'video') { ?>
+								<?php
+									$doctype = get_field('document_type');
+									if ($doctype  == 'video') {
+								?>
 								<div class="view-video featured-resource">
 									<a href="<?php the_permalink() ?>" target="_blank" data-toggle="modal" data-target=".video-modal" data-title="<?php the_title() ?>"><?php echo get_post_read_label(get_the_ID()); ?> &rsaquo;</a>
 								</div>
 
 								<?php } else { ?>
-									<a href="<?php the_permalink() ?>" target="_blank"><?php echo get_post_read_label(get_the_ID()); ?> &rsaquo;</a>
+									<a href="<?php the_permalink() ?>"<?php echo ($doctype != 'article') ? ' target="_blank"' : '' ?>><?php echo get_post_read_label(get_the_ID()); ?> &rsaquo;</a>
 								<?php } ?>
 							</div>
 						</div>

@@ -1,9 +1,9 @@
 {
-    "key": "group_57e60b39716aa",
+    "key": "group_57edd07c9d0ef",
     "title": "Sidebar",
     "fields": [
         {
-            "key": "field_57e77411b733f",
+            "key": "field_57edd08553dd2",
             "label": "Sidebar",
             "name": "",
             "type": "tab",
@@ -19,7 +19,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_57e60b466da7d",
+            "key": "field_57edd09553dd3",
             "label": "Widgets",
             "name": "widgets",
             "type": "repeater",
@@ -31,17 +31,17 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "field_57e61cee988e3",
+            "collapsed": "",
             "min": "",
             "max": "",
             "layout": "table",
-            "button_label": "Add Row",
+            "button_label": "Add Widget",
             "sub_fields": [
                 {
-                    "key": "field_57e61cee988e3",
-                    "label": "Template block",
-                    "name": "widget",
-                    "type": "post_object",
+                    "key": "field_57edd0a553dd4",
+                    "label": "",
+                    "name": "",
+                    "type": "clone",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -50,14 +50,13 @@
                         "class": "",
                         "id": ""
                     },
-                    "post_type": [
-                        "template_blocks"
+                    "clone": [
+                        "field_57e02eed199c9"
                     ],
-                    "taxonomy": [],
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "return_format": "id",
-                    "ui": 1
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0
                 }
             ]
         }
@@ -69,15 +68,22 @@
                 "operator": "==",
                 "value": "page"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "resources"
+            }
         ]
     ],
     "menu_order": 0,
     "position": "normal",
-    "style": "default",
+    "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1474793565
+    "modified": 1475205634
 }

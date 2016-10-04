@@ -16,7 +16,7 @@
                 "id": ""
             },
             "choices": {
-                "no-attachment": "Standard article\/post",
+                "article": "Standard article\/post",
                 "url": "External URL",
                 "file": "File (document, file...)",
                 "video": "Video (play video)"
@@ -147,6 +147,13 @@
                 "operator": "==",
                 "value": "resources"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "events"
+            }
         ]
     ],
     "menu_order": 0,
@@ -157,5 +164,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1475144693
+    "modified": 1475388127
 }

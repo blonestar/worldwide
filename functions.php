@@ -207,7 +207,6 @@ function worldwide_setup() {
 	 * Enable support for Post Formats.
 	 *
 	 * See: https://codex.wordpress.org/Post_Formats
-	 */
 	add_theme_support( 'post-formats', array(
 		'aside',
 		'image',
@@ -219,6 +218,7 @@ function worldwide_setup() {
 		'audio',
 		'chat',
 	) );
+	 */
 
 	// Indicate widget sidebars can use selective refresh in the Customizer.
 	add_theme_support( 'customize-selective-refresh-widgets' );
@@ -414,7 +414,7 @@ function team_members_post_type() {
 		'label'                 => __( 'Team', 'worldwide' ),
 		'description'           => __( 'Main Team Members', 'worldwide' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'thumbnail', ),
+		'supports'              => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -621,6 +621,63 @@ function assay_post_type() {
 
 }
 add_action( 'init', 'assay_post_type', 0 );
+
+
+
+// Register Custom Post Type
+function events_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Events', 'Post Type General Name', 'worldwide' ),
+		'singular_name'         => _x( 'Event', 'Post Type Singular Name', 'worldwide' ),
+		'menu_name'             => __( 'Events', 'worldwide' ),
+		'name_admin_bar'        => __( 'Events', 'worldwide' ),
+		'archives'              => __( 'Item Archives', 'worldwide' ),
+		'parent_item_colon'     => __( 'Parent Item:', 'worldwide' ),
+		'all_items'             => __( 'All Events', 'worldwide' ),
+		'add_new_item'          => __( 'Add New', 'worldwide' ),
+		'add_new'               => __( 'Add New', 'worldwide' ),
+		'new_item'              => __( 'New', 'worldwide' ),
+		'edit_item'             => __( 'Edit', 'worldwide' ),
+		'update_item'           => __( 'Update', 'worldwide' ),
+		'view_item'             => __( 'View', 'worldwide' ),
+		'search_items'          => __( 'Search', 'worldwide' ),
+		'not_found'             => __( 'Not found', 'worldwide' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'worldwide' ),
+		'featured_image'        => __( 'Featured Image', 'worldwide' ),
+		'set_featured_image'    => __( 'Set featured image', 'worldwide' ),
+		'remove_featured_image' => __( 'Remove featured image', 'worldwide' ),
+		'use_featured_image'    => __( 'Use as featured image', 'worldwide' ),
+		'insert_into_item'      => __( 'Insert into item', 'worldwide' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'worldwide' ),
+		'items_list'            => __( 'Items list', 'worldwide' ),
+		'items_list_navigation' => __( 'Items list navigation', 'worldwide' ),
+		'filter_items_list'     => __( 'Filter items list', 'worldwide' ),
+	);
+	$args = array(
+		'label'                 => __( 'Events', 'worldwide' ),
+		'description'           => __( 'Events', 'worldwide' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'excerpt' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 20,
+		'menu_icon'             => 'dashicons-clock',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => false,		
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'rewrite'               => true,
+		'capability_type'       => 'post',
+	);
+	register_post_type( 'events', $args );
+
+}
+add_action( 'init', 'events_post_type', 0 );
 
 
 

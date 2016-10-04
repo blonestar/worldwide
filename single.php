@@ -13,7 +13,7 @@
 <div class="container-wrapper standard-container-wrapper " style="background-color: <?php echo get_field('background_color') ?>">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-<?php echo $main_col_width ?> col-sm-offset-1">
+			<div class="col-sm-<?php echo $main_col_width ?> col-sm-offset-1">2323232
 				<?php the_content() ?>
 			</div>
 			<?php if (have_rows('widgets')) { ?>
